@@ -1,5 +1,3 @@
-[![Slack Room][slack-badge]][slack-link]
-
 # pragmaprompt
 
 A **pragmatic** `bash` prompt done by a [`fish-shell`](https://github.com/fish-shell/fish-shell) user!
@@ -9,6 +7,8 @@ A **pragmatic** `bash` prompt done by a [`fish-shell`](https://github.com/fish-s
 * Code validated using [`bashate`](https://github.com/openstack-dev/bashate) and [`shellcheck`](https://github.com/koalaman/shellcheck).
 * Compatible and quite `POSIX`.
 
+![pragmaprompt]
+
 Supports prompting:
 
 * Username (in *warning red* if root)
@@ -16,8 +16,6 @@ Supports prompting:
 * Return value of last command
 * State of version control (powered by [`vcprompt`](https://bitbucket.org/gward/vcprompt))
 * Active *Python* `virtualenv` or current version managed by [`pyenv`](https://github.com/yyuu/pyenv).
-
-![pragmaprompt]
 
 > Tested on *iTerm3 nightlies*.
 
@@ -63,5 +61,5 @@ A recommandable and well-matching font:
 If you tend to use [`fish-shell`](https://github.com/fish-shell/fish-shell) please check out the [`cyber-trance`](https://github.com/fishgretel/cyber-trance) theme for a similar approach.
 
 [vcprompt]: https://bitbucket.org/gward/vcprompt
-[pragmaprompt]: https://cloud.githubusercontent.com/assets/80815/15529646/1776807a-224f-11e6-8bf0-77c210919af1.png
+[pragmaprompt]: https://cloud.githubusercontent.com/assets/80815/15548709/f25ecc38-22a9-11e6-9e9e-c2b6eca03ceb.gif
 
