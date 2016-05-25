@@ -8,7 +8,6 @@ A **pragmatic** `bash` prompt done by a [`fish-shell`](https://github.com/fish-s
 * Compatible and quite `POSIX`.
 
 ![pragmaprompt](https://cloud.githubusercontent.com/assets/80815/15549133/85d74ea8-22ab-11e6-95fa-15d997ff99f9.png)
-
 Supports prompting:
 
 * Username (in *warning red* if root)
@@ -17,7 +16,7 @@ Supports prompting:
 * State of version control (powered by [`vcprompt`](https://bitbucket.org/gward/vcprompt))
 * Active *Python* `virtualenv` or current version managed by [`pyenv`](https://github.com/yyuu/pyenv).
 
-[![asciicast](https://asciinema.org/a/6t3tuvd8ajy0ztg99epi48ki8.png)](https://asciinema.org/a/6t3tuvd8ajy0ztg99epi48ki8)
+[![asciicast](https://asciinema.org/a/46814.png)](https://asciinema.org/a/46814)
 
 > Tested on *iTerm3 nightlies*.
 
