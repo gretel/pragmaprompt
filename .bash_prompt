@@ -1,0 +1,56 @@
+#!/bin/bash
+# -*- mode: bash; coding:utf-8; tab-width: 4; indent-tabs-mode: nil; -*-
+#
+# Copyright (c) 2016 Tom Hensel
+#
+
+set -o posix
+
+BLUE="\[$(tput setaf 4)\]"
+CYAN="\[$(tput setaf 6)\]"
+GREEN="\[$(tput setaf 2)\]"
+PURPLE="\[$(tput setaf 5)\]"
+RED="\[$(tput setaf 1)\]"
+WHITE="\[$(tput setaf 7)\]"
+RESET="\[$(tput sgr0)\]"
+DATE_FMT="+%H:%M.%S"
+
+function get_abbrv_pwd {
+    base="${1##*/}"
+    dir="${1%/*}"
+    echo "${dir##*/}/${base}"
+}
+
+function set_prompt {
+    local retval=$?
+    local PREFIX SUFFIX DATE PY_VENV
+    DATE="${BLUE}$(date "$DATE_FMT")|"
+    if test "$USER" = "root"; then
+        PREFIX="${RED}\u${WHITE}:\w"
+    else
+        # abbreviate PWD for non-root users
+        PREFIX="${GREEN}\u${WHITE}:$(get_abbrv_pwd "$PWD")"
+    fi
+    if command -v vcprompt >/dev/null; then
+        local vcp
+        vcp="$(vcprompt -f '%n:%b %u%m')"
+        if test -n "$vcp"; then
+            local GIT_STATE="${CYAN}|${vcp}"
+        fi
+    fi
+    if test -n "$VIRTUAL_ENV"; then
+        PY_VENV="${PURPLE}|$(basename "$VIRTUAL_ENV")"
+    elif test -n "$PYENV_VERSION"; then
+        PY_VENV="${PURPLE}|${PYENV_VERSION})"
+    fi
+
+    if test $retval -eq 0; then
+        SUFFIX="${WHITE}|${retval}> ${RESET}"
+    else
+        SUFFIX="${WHITE}|${RED}${retval}${WHITE}> ${RESET}"
+    fi
+    # compose
+    export PS1="${DATE}${PREFIX}${GIT_STATE}${PY_VENV}${SUFFIX}"
+}
+
+PROMPT_COMMAND=set_prompt
