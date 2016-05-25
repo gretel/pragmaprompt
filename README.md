@@ -2,12 +2,10 @@
 
 A **pragmatic** `bash` prompt done by a [`fish-shell`](https://github.com/fish-shell/fish-shell) user!
 
-* Lighweight and simple, _no bloat_.
-* Fast, very much so.
-* Code validated using [`bashate`](https://github.com/openstack-dev/bashate) and [`shellcheck`](https://github.com/koalaman/shellcheck).
+* Lighweight and simple, _no bloat_
+* Fast, very much so
+* Code validated using [`bashate`](https://github.com/openstack-dev/bashate) and [`shellcheck`](https://github.com/koalaman/shellcheck)
 * Compatible and quite `POSIX`.
-
-[![asciicast](https://cloud.githubusercontent.com/assets/80815/15549133/85d74ea8-22ab-11e6-95fa-15d997ff99f9.png)](https://asciinema.org/a/46814)
 
 Supports prompting:
 
@@ -17,6 +15,7 @@ Supports prompting:
 * State of version control (powered by [`vcprompt`](https://bitbucket.org/gward/vcprompt))
 * Active *Python* `virtualenv` or current version managed by [`pyenv`](https://github.com/yyuu/pyenv).
 
+[![asciicast](https://cloud.githubusercontent.com/assets/80815/15549133/85d74ea8-22ab-11e6-95fa-15d997ff99f9.png)](https://asciinema.org/a/46814)
 
 > Tested on *iTerm3 nightlies*.
 
