@@ -7,7 +7,7 @@ A **pragmatic** `bash` prompt done by a [`fish-shell`](https://github.com/fish-s
 * Code validated using [`bashate`](https://github.com/openstack-dev/bashate) and [`shellcheck`](https://github.com/koalaman/shellcheck).
 * Compatible and quite `POSIX`.
 
-![asciicast](https://cloud.githubusercontent.com/assets/80815/15548709/f25ecc38-22a9-11e6-9e9e-c2b6eca03ceb.gif)
+![pragmaprompt](https://cloud.githubusercontent.com/assets/80815/15549133/85d74ea8-22ab-11e6-95fa-15d997ff99f9.png)
 
 Supports prompting:
 
@@ -16,6 +16,8 @@ Supports prompting:
 * Return value of last command
 * State of version control (powered by [`vcprompt`](https://bitbucket.org/gward/vcprompt))
 * Active *Python* `virtualenv` or current version managed by [`pyenv`](https://github.com/yyuu/pyenv).
+
+[![asciicast](https://asciinema.org/a/6t3tuvd8ajy0ztg99epi48ki8.png)](https://asciinema.org/a/6t3tuvd8ajy0ztg99epi48ki8)
 
 > Tested on *iTerm3 nightlies*.
 
