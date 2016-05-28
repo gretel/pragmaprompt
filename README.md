@@ -2,17 +2,17 @@
 
 A **pragmatic** `bash` prompt done by a [`fish-shell`](https://github.com/fish-shell/fish-shell) user!
 
-* Lighweight and simple, _no bloat_
-* Fast, very much so
+* _Lighweight_ and simple, **no bloat**
+* Fast, optimized for low latencies
 * Code validated using [`bashate`](https://github.com/openstack-dev/bashate) and [`shellcheck`](https://github.com/koalaman/shellcheck)
-* Compatible and quite `POSIX`.
+* Intended to be compatible and quite `POSIX`.
 
-Supports prompting:
+Supports prompting of:
 
-* Username (in *warning red* if root)
-* Timestamp of last command
+* Username (in *warning red* if **root**)
+* Timestamp of last command (see `DATE_FMT`)
 * Return value of last command
-* State of version control (powered by [`vcprompt`](https://bitbucket.org/gward/vcprompt))
+* State of version control (powered by [`vcprompt`](https://bitbucket.org/gward/vcprompt) - see `VCPROMPT_FMT`)
 * Active *Python* `virtualenv` or current version managed by [`pyenv`](https://github.com/yyuu/pyenv)
 * Use of a _multiplexer_ (`screen` or `tmux`).
 
@@ -51,7 +51,7 @@ brew install vcprompt --HEAD
 
 > Using **HEAD** versions is optional but recommended especially in regards to `vcprompt`.
 
-> Note: The *bitbucket* repo of `vcprompt` *homebrew* uses is one of the few actually being maintained.
+> The *bitbucket* repo of `vcprompt` *homebrew*'s **HEAD** formulae uses is one of the few actually being maintained.
 
 ## Terminal Settings
 

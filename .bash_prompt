@@ -13,7 +13,9 @@ BLACK="\[$(tput setaf 0)\]"
 WHITE="\[$(tput setaf 7)\]"
 GREY="\[$(tput setaf 8)\]"
 RESET="\[$(tput sgr0)\]"
+
 DATE_FMT='+%H:%M.%S'
+VCPROMPT_FMT='%n:%b %u%m'
 
 function get_abbrv_pwd {
     base="${1##*/}"
@@ -33,7 +35,7 @@ function set_prompt {
     fi
     if command -v vcprompt >/dev/null; then
         local vcp
-        vcp="$(vcprompt -f '%n:%b %u%m')"
+        vcp="$(vcprompt -f "$VCPROMPT_FMT")"
         if test -n "$vcp"; then
             local GIT_STATE="${GREEN}|${vcp}"
         fi
