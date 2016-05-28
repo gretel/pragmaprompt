@@ -13,7 +13,8 @@ Supports prompting:
 * Timestamp of last command
 * Return value of last command
 * State of version control (powered by [`vcprompt`](https://bitbucket.org/gward/vcprompt))
-* Active *Python* `virtualenv` or current version managed by [`pyenv`](https://github.com/yyuu/pyenv).
+* Active *Python* `virtualenv` or current version managed by [`pyenv`](https://github.com/yyuu/pyenv)
+* Use of a _multiplexer_ (`screen` or `tmux`).
 
 [![asciicast](https://cloud.githubusercontent.com/assets/80815/15549133/85d74ea8-22ab-11e6-95fa-15d997ff99f9.png)](https://asciinema.org/a/46814)
 
@@ -31,6 +32,8 @@ Finally, include the file in your `.bashrc` **or** `.bash_profile`:
 source "$HOME/.bash_prompt"
 ```
 
+> There is a `.bashrc` file in this repository which enables quite a bunch of tools. While it should be safe to use please read the code to check if it suits your needs.
+
 ## Integration
 
 While truly optional the following tool is supported:
@@ -42,8 +45,11 @@ On *OS X* *homebrew* can be used to get these:
 
 ```
 brew install pyenv --HEAD
+brew install tmux --HEAD
 brew install vcprompt --HEAD
 ```
+
+> Using **HEAD** versions is optional but recommended especially in regards to `vcprompt`.
 
 > Note: The *bitbucket* repo of `vcprompt` *homebrew* uses is one of the few actually being maintained.
 
