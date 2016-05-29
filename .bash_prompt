@@ -31,7 +31,7 @@ function set_prompt {
         PREFIX="${RED}\u${WHITE}:\w"
     else
         # abbreviate PWD for non-root users
-        PREFIX="${GREY}\u${WHITE}:$(get_abbrv_pwd "$PWD")"
+        PREFIX="${GREY}\u|${WHITE}$(get_abbrv_pwd "$PWD")"
     fi
     if command -v vcprompt >/dev/null; then
         local vcp
