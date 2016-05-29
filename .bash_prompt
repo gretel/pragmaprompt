@@ -43,7 +43,7 @@ function set_prompt {
     if test -n "$VIRTUAL_ENV"; then
         PY_VENV="${PURPLE}|venv"
     elif test -n "$PYENV_VERSION"; then
-        PY_VENV="${PURPLE}|${PYENV_VERSION})"
+        PY_VENV="${PURPLE}|${PYENV_VERSION}"
     fi
     if [ "$TERM" = 'screen' ] || [ -n "$TMUX" ]; then
         MUX="|${GREEN}mux"
