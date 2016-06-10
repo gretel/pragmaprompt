@@ -1,9 +1,9 @@
 class PragmaPrompt < Formula
   desc "A pragmatic bash prompt done by a wannabe zen minimalist"
   homepage "https://github.com/gretel/pragmaprompt"
-  url "https://github.com/gretel/pragmaprompt/archive/v0.2.tar.gz"
+  url "https://github.com/gretel/pragmaprompt/archive/v0.3.tar.gz"
   head "https://github.com/gretel/pragmaprompt.git"
-  sha256 "ea5e5300a3152ac2a9807b8b41c93bc2324bbbf4"
+  sha256 "61fec4c356783bd65de7f67e80fd14f6afe5d674"
 
   def install
     share.install "pragmaprompt.sh"
