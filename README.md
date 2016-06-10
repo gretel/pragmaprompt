@@ -18,21 +18,41 @@ Supports prompting of:
 
 [![asciicast](https://cloud.githubusercontent.com/assets/80815/15549133/85d74ea8-22ab-11e6-95fa-15d997ff99f9.png)](https://asciinema.org/a/46814)
 
-> Tested on *iTerm3 nightlies*.
+> Tested on *iTerm2 nightlies*:
+>
+> `brew cask install iterm2-nightly`
 
 ## Installation
 
+### Homebrew
+
+```bash
+$ brew install https://raw.githubusercontent.com/gretel/pragmaprompt/master/pragmaprompt.rb
+```
+
+Please follow the instructions shown:
+
+```
+The prompt needs to be enabled manually.
+Please add the following to your .bashrc:
+    if [ -f "$(brew --prefix pragmaprompt)/share/pragmaprompt.sh" ]; then
+        source "$(brew --prefix pragmaprompt)/share/pragmaprompt.sh"
+    fi
+Then, you may restart the shell:
+    exec bash
+```
+
 ### Manually
 
-Clone this repository or get the file somehow and put it at `~/.bash_prompt`.
+Clone this repository or get the file somehow and put it somehwere like `~/pragmaprompt.sh`.
 
 Finally, include the file in your `.bashrc` **or** `.bash_profile`:
 
+```bash
+if [ -f "$HOME/pragmaprompt.sh" ]; then
+    source "$HOME/pragmaprompt.sh"
+fi
 ```
-source "$HOME/.bash_prompt"
-```
-
-> There is a `.bashrc` file in this repository which enables quite a bunch of tools. While it should be safe to use please read the code to check if it suits your needs.
 
 ## Integration
 
@@ -43,7 +63,7 @@ While truly optional the following tool is supported:
 
 On *OS X* *homebrew* can be used to get these:
 
-```
+```bash
 brew install pyenv --HEAD
 brew install tmux --HEAD
 brew install vcprompt --HEAD

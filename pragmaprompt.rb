@@ -13,7 +13,7 @@ class Pragmaprompt < Formula
   def caveats; <<-EOS.undent
     The prompt needs to be enabled manually.
     Please add the following to your .bashrc:
-        if test -f "$(brew --prefix pragmaprompt)/share/pragmaprompt.sh"; then
+        if [ -f "$(brew --prefix pragmaprompt)/share/pragmaprompt.sh" ]; then
             source "$(brew --prefix pragmaprompt)/share/pragmaprompt.sh"
         fi
     Then, you may restart the shell:
