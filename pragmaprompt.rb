@@ -1,4 +1,4 @@
-class PragmaPrompt < Formula
+class Pragmaprompt < Formula
   desc "A pragmatic bash prompt done by a wannabe zen minimalist"
   homepage "https://github.com/gretel/pragmaprompt"
   url "https://github.com/gretel/pragmaprompt/archive/v0.3.tar.gz"
